@@ -4,31 +4,71 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState("")
+
+
+
+  // comportement
+  const handleChange=(e)=>{
+    if (e.target.value==="") {
+      alert("Veuillez renseigner le prenon")
+      
+    }
+    console.log(e.target.value)
+    setCount(e.target.value)
+
+  }
+const handleClick=()=>{
+ 
+  if (count==="") {
+    alert("Veuillez renseigner le prenon")
+    
+  } else {
+
+    alert("bonjour ",count)
+  }
+
+}
+
+
+
+
+
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+       
+       
       </div>
-      <h1>Vite + React</h1>
+      <h1>Bienvenue chez vous</h1>
+      <h5>Veuillez vous connecter</h5>
       <div className="card">
-        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more about !!!
-      </p>
+        <form class="d-flex">
+            <div class="col">
+                <div class="mb-3">
+            
+                    <input
+                        type="text"
+                        required
+                        name=""
+                        value={count}
+                        onChange={(e) =>handleChange(e)}
+                        id=""
+                        class="form-control"
+                        placeholder="veuillez enter votre prénom"
+                        aria-describedby="helpId"
+                    />
+                    {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+                    <button  class="form-control" onClick={handleClick}>
+                    Accedez dans votre espace
+                    </button>
+                  
+                </div>
+            </div>
+        </form>
+              
+      </div> 
     </>
   )
 }
