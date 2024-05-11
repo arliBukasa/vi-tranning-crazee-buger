@@ -5,11 +5,11 @@ import { useState } from "react"
 export default function LoginPage() {
 
 //state
-const [count, setCount] = useState("")
+const [inputPrenom, setInputPrenom] = useState("")
 //comportement
 const handleChange=(e)=>{
 
-  setCount(e.target.value)
+  setInputPrenom(e.target.value)
 
 }
 const handleClick=()=>{
@@ -18,12 +18,13 @@ handleSubmit()
 }
 const handleSubmit = (e) => { 
   e.preventDefault()
-  if (count==="") {
+  if (inputPrenom==="") {
     alert("Veuillez renseigner le prenon")
     
   } else {
   
-    alert(`bonjour ! ${count}`)
+    alert(`bonjour ! ${inputPrenom}`)
+    setInputPrenom("")
   } 
 
  }
@@ -39,7 +40,7 @@ const handleSubmit = (e) => {
                     type="text"
                     required
                     name=""
-                    value={count}
+                    value={inputPrenom}
                     onChange={(e) =>handleChange(e)}
                     id=""
                     class="form-control"
