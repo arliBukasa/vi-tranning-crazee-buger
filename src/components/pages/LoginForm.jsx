@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginForm() {
 
     //state
     const [inputPrenom, setInputPrenom] = useState("")
+    const navigate=useNavigate()
     //comportement
     const handleChange=(e)=>{
 
@@ -21,7 +23,8 @@ export default function LoginForm() {
         
     } else {
     
-        alert(`bonjour ! ${inputPrenom}`)
+        //alert(`bonjour ! ${inputPrenom}`)
+        navigate(`order/${inputPrenom}`)
         setInputPrenom("")
     } 
 

@@ -12,8 +12,9 @@ import Root from './root';
         <Routes>
             <Route path='/' element={<LoginPage/>}  errorElement={<ErrorPage/>}/>
             <Route path='/login' element={<LoginPage/>}/>
-            <Route path='/order' element={<OrderPage/>} />
+            <Route path='/order/:inputPrenom' element={<OrderPage/>} />
             <Route path='/default' element={<Root/>}/>
+            <Route path='*' element={<ErrorPage/>}/>
         </Routes>   
      </BrowserRouter>
    )
