@@ -39,8 +39,8 @@ export default function LoginForm() {
             <div className="col">
                 <div className="mb-3">
                     <div>
-                    <h1>Bienvenue chez vous!</h1>
-                    <h5>connectez-vous!</h5>
+                        <h1>Bienvenue chez vous!</h1>
+                        <h5>connectez-vous!</h5>
                     </div>
             
                     <input
