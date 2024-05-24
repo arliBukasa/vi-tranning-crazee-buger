@@ -2,8 +2,8 @@ import React from "react"
 import { useState } from "react"
 import LoginForm from "./LoginForm"
 import styled from "styled-components"
-import { theme } from "../../theme"
-import Logo from "../reusable-ui/Logo"
+import { theme } from "../../../theme"
+import Logo from "../../reusable-ui/Logo"
 
 
 export default function LoginPage() {

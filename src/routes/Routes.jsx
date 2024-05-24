@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route,Routes, createBrowserRouter } from 'react-router-dom';
-import LoginPage from '../components/pages/LoginPage';
+
 import ErrorPage from '../ErrorPage';
 import OrderPage from '../components/pages/OrderPage';
 import Root from './root';
+import LoginPage from '../components/pages/login-components/LoginPage';
 
  
  export default function MRoutes() {
