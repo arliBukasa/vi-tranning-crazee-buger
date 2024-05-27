@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../../theme'
 import { IoChevronForward } from 'react-icons/io5'
-import Input from './input'
-import { BsKey, BsPersonCircle } from 'react-icons/bs'
+import Input from '../../reusable-ui/input'
+import { BsKey, BsPersonCircle, BsTrash } from 'react-icons/bs'
+import PrimaryButton from '../../reusable-ui/PrimaryButton'
 
 export default function LoginForm() {
 
@@ -46,10 +47,7 @@ export default function LoginForm() {
                     </div>
                     <Input value={inputPrenom} onChange={handleChange} placeholder={"Enter votre prénom"} Icon={ <BsPersonCircle className='icon' />} required/>
                    
-                    {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-                    <button  className="" onClick={handleClick}>
-                   <span> Accedez à mon espace</span> <IoChevronForward className='icon'/>
-                    </button>
+                    <PrimaryButton label={"Accedez à mon espace"} Icon={<IoChevronForward className='icon'/>} onClick={handleClick}/>
                 
                 </div>
             </div>
@@ -82,32 +80,7 @@ h2{
     margin:20px 10px 10px;
     font-size:36px;
 }
-button{
-    background: ${theme.colors.primary_burger};
-    color:${theme.colors.white};
-    width:100%;
-    border: 1px solid ${theme.colors.primary_burger};
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    line-height:1;
-
-    padding:18px 24px;
-    border-radius:5px;
-    font-size:15px;
-    font-weight:700;
-    &:hover{
-        background:${theme.colors.white};
-        color:${theme.colors.primary};
-    }
-    .icon{ 
-        font-size:15px;
-        margin-left:8px;
-
-    }
-   
-  }
-  
+ 
   
 `;
 
