@@ -18,9 +18,9 @@ const Logostyled = styled.div`
   h1{
     display:inline;
     color:${theme.colors.primary};
-    font-size:${theme.fonts.Xs};
+    font-size:${theme.fonts.P4};
     line-height:1em;
-    font-weight:700px;
+    font-weight:${theme.weights.bold};
     text-tranform:uppercase;
     letter-spacing:1.5px;
     font-family:"Amatic SC", cursive;
@@ -30,7 +30,7 @@ const Logostyled = styled.div`
     object-position:center;
     height:60px;
     width:80px;
-    margin:0 5px;
+    margin:0 ${theme.gridUnit/2}px;
   }
 `;
 export default Logo

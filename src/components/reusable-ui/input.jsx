@@ -18,7 +18,7 @@ export default function Input({value,onChange,Icon, ...restprops}) {
 
 const InputStyled = styled.div`
  border-radius:5px;
-    background:${theme.colors.background_white};
+    background:${theme.colors.white};
     display:flex;
     align-items:center;
     padding:18px 24px;
@@ -34,6 +34,9 @@ const InputStyled = styled.div`
     font-size:15px;
     color:#17161a;
     width:100%;
+    &::placeholder{
+      color:${theme.colors.greyLight};
+    }
     }
   
 `;

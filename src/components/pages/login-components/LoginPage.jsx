@@ -1,5 +1,4 @@
 import React from "react"
-import { useState } from "react"
 import LoginForm from "./LoginForm"
 import styled from "styled-components"
 import { theme } from "../../../theme"
@@ -9,8 +8,6 @@ import Logo from "../../reusable-ui/Logo"
 export default function LoginPage() {
 
 //state
-const [connected, setConnected] = useState(false)
-const [username, setUsername] = useState("")
 
 //comportement
 
