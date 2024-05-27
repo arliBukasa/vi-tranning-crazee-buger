@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../../theme'
-import { BsPersonCircle } from 'react-icons/bs'
 import { IoChevronForward } from 'react-icons/io5'
+import Input from './input'
+import { BsKey, BsPersonCircle } from 'react-icons/bs'
 
 export default function LoginForm() {
 
@@ -12,13 +13,11 @@ export default function LoginForm() {
     const navigate=useNavigate()
     //comportement
     const handleChange=(e)=>{
-
     setInputPrenom(e.target.value)
-
     }
+
     const handleClick=()=>{
     handleSubmit()
-
     }
     const handleSubmit = (e) => { 
     e.preventDefault()
@@ -45,21 +44,8 @@ export default function LoginForm() {
                         <hr/>
                         <h2>connectez-vous!</h2>
                     </div>
-            
-                    <div className='input-container'>
-                        <BsPersonCircle className='icon'/>
-                        <input
-                            type="text"
-                            required
-                            name=""
-                            value={inputPrenom}
-                            onChange={(e) =>handleChange(e)}
-                            id=""
-                            className="form-control"
-                            placeholder="Enter votre prénom"
-                            aria-describedby="helpId"
-                        />
-                    </div>
+                    <Input value={inputPrenom} onChange={handleChange} placeholder={"Enter votre prénom"} Icon={ <BsPersonCircle className='icon' />} required/>
+                   
                     {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
                     <button  className="" onClick={handleClick}>
                    <span> Accedez à mon espace</span> <IoChevronForward className='icon'/>
@@ -122,27 +108,6 @@ button{
    
   }
   
-.input-container{
-    border-radius:5px;
-    background:${theme.colors.background_white};
-    display:flex;
-    align-items:center;
-    padding:18px 24px;
-    margin:18px 0;
-    
-    .icon{ 
-        font-size:15px;
-        margin-right:8px;
-        color:#93a2b1;
-    }
-    input{  
-    border: none ;
-    font-size:15px;
-    color:#17161a;
-    }
-   
-}
-
   
 `;
 
