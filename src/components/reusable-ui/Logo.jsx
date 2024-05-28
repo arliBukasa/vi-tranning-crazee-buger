@@ -12,7 +12,7 @@ const Logostyled = styled.div`
   /*background: ${theme.colors.blue};*/
   display:flex;
   align-items:center;
- 
+  
   
   
   h1{
