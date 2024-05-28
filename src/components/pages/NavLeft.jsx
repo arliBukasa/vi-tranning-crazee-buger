@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
+import Logo from '../reusable-ui/Logo'
 
 export default function NavLeft() {
   return (
     <NavLeftstyled className='left-side'>
-        left
+        <Logo/>
     </NavLeftstyled>
   )
 }
