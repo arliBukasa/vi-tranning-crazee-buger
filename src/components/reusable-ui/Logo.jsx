@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import { theme } from '../../theme';
-function Logo() {
+function Logo({className}) {
   return (
-    <Logostyled>
+    <Logostyled className={className}> 
         <h1>CRAZEE </h1> <img src='/images/logo-orange.png' alt='Logo-crazee'/><h1>BURGER</h1>
     </Logostyled>
   )
@@ -12,7 +12,7 @@ const Logostyled = styled.div`
   /*background: ${theme.colors.blue};*/
   display:flex;
   align-items:center;
- 
+  
   
   
   h1{

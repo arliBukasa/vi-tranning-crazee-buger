@@ -15,7 +15,7 @@ export default function LoginPage() {
   return (
   <LoginPagestyled>
     <div className="flex-container">
-      <Logo/> 
+      <Logo className="logo-login"/> 
       <LoginForm/> 
     </ div>
   </LoginPagestyled>)
@@ -31,7 +31,7 @@ justify-content:center;
 align-items:center;
 flex-direction: column;
 
-::before{
+&:before{
   height:100vh;
   content:"";
   background:url("/images/burger-background.jpg") rgba(0,0,0,0.7);
@@ -49,9 +49,10 @@ flex-direction: column;
   display: flex;
   justify-content:center;
   align-items:center;
-  flex-direction: column;
-  
-  
+  flex-direction: column; 
 } 
+.logo-login{
+    transform:scale(1.5);
+  }
 `
  
