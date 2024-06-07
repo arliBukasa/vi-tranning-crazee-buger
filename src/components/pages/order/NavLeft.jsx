@@ -10,5 +10,6 @@ export default function NavLeft() {
   )
 }
 const NavLeftstyled = styled.div`
-     border: 1px solid brown;
+     /* border: 1px solid brown; */
+     
 `;
